@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllX.uk | The Ultimate Business Solution</title>
+    <style>
+        :root {
+            --bg-color: #070709;
+            --card-bg: #111114;
+            --text-main: #f8fafc;
+            --text-muted: #8b8b99;
+            --border-color: #1f1f26;
+            
+            --color-pink: #DF94D4;
+            --color-blue: #96BCEE;
+            --color-green: #2DBA84;
+            --color-purple: #8E2496;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 5% 40px;
+            border-bottom: 1px solid var(--border-color);
+            background: radial-gradient(circle at top center, #15151c 0%, var(--bg-color) 100%);
+        }
+
+        .hero-logo {
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero-logo img {
+            width: 117px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 800px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+
+        .features {
+            padding: 100px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px 32px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #33333d;
+        }
+
+        .icon-wrapper {
+            margin-bottom: 24px;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .card:nth-child(1) .icon-wrapper svg { stroke: var(--color-pink); }
+        .card:nth-child(2) .icon-wrapper svg { stroke: var(--color-blue); }
+        .card:nth-child(3) .icon-wrapper svg { stroke: var(--color-green); }
+        .card:nth-child(4) .icon-wrapper svg { stroke: var(--color-purple); }
+
+        footer {
+            text-align: center;
+            padding: 80px 5% 40px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer .coming-soon {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, var(--color-pink), var(--color-blue), var(--color-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-logo">
+            <img src="https://cdn.allx.uk/logo.svg" alt="AllX.uk Logo">
+        </div>
+        <h1>Everything your business needs, in one place.</h1>
+        <p>Drop the endless subscriptions. AllX combines scalable cloud storage, seamless email hosting, and powerful team tools into one unified platform.</p>
+    </section>
+
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2>Built for modern teams</h2>
+            <p>Powerful tools without the usual complexity.</p>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                    </svg>
+                </div>
+                <h3>Scalable Cloud Storage</h3>
+                <p>Store, share, and collaborate on files with lightning-fast speeds. Redundant infrastructure keeps your data safe and highly available.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                </div>
+                <h3>Pro Email Hosting</h3>
+                <p>Custom @yourdomain email addresses with advanced spam filtering, unified inboxes, and seamless integration with your favorite mail apps.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h3>Team Workspaces</h3>
+                <p>Manage permissions, create shared drives, and keep your entire team on the same page without the usual administrative chaos.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
+                <h3>Advanced Protection</h3>
+                <p>Multi-factor authentication, rigorous access controls, and automated daily backups. Sleep easy knowing your business continuity is prioritized.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="coming-soon">Coming Soon.</div>
+        <p>&copy; 2026 AllX.uk. All rights reserved.</p>
+    </footer>
+</body>
+</html>
